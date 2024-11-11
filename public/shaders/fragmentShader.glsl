@@ -3,7 +3,7 @@ precision mediump float;
 uniform float iTime;
 uniform vec2 iResolution;
 
-uniform vec3 uGradientColors[7]; 
+uniform vec3 uGradientColors[7];
 
 // Animation parameters
 uniform float uAnimationSpeed;
@@ -45,7 +45,6 @@ float hash(float p) {
     return fract(fac * sin(p));
 }
 
-// 3D Noise
 float noise(in vec3 p) {
     p *= uNoiseScale * uNoiseFrequency;
     vec3 i = floor(p);
@@ -180,9 +179,9 @@ void main() {
     float dh = uStepSize;
     float tmax = 300.0;
 
-    vec3 col = vec3(0.0);
+    vec3 col = vec3(0.0); // Start with a black background
 
-    // Volumetric rendering in grayscale
+    // Volumetric aurora rendering in grayscale
     vec3 vol = vec3(0.0);
     float den = 0.0;
     float h = noise(fragCoord + p);
@@ -206,14 +205,16 @@ void main() {
         h += dh;
     }
 
+    // Apply tone mapping to prevent overexposure
     col = pow(vol, vec3(1.5));
 
+    // Apply gamma correction
     col = sqrt(col);
 
-    // Compute the intensity of the grayscale image
+    // Compute the intensity of the grayscale aurora
     float intensity = dot(col, vec3(0.299, 0.587, 0.114)); // Luminance calculation
 
-    // Map the intensity to the gradient colors
+    // Map the intensity to the aurora gradient colors
     vec3 finalColor = gradient(intensity);
 
     // Adjust intensity
