@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.964fdded.css",
-    "main.js": "/static/js/main.d92d5af5.js",
-    "static/js/453.6a57f684.chunk.js": "/static/js/453.6a57f684.chunk.js",
-    "index.html": "/index.html",
-    "main.964fdded.css.map": "/static/css/main.964fdded.css.map",
-    "main.d92d5af5.js.map": "/static/js/main.d92d5af5.js.map",
-    "453.6a57f684.chunk.js.map": "/static/js/453.6a57f684.chunk.js.map"
+    "main.css": "/KXOAnimasjon/static/css/main.964fdded.css",
+    "main.js": "/KXOAnimasjon/static/js/main.53ce627b.js",
+    "static/js/453.6a57f684.chunk.js": "/KXOAnimasjon/static/js/453.6a57f684.chunk.js",
+    "index.html": "/KXOAnimasjon/index.html",
+    "main.964fdded.css.map": "/KXOAnimasjon/static/css/main.964fdded.css.map",
+    "main.53ce627b.js.map": "/KXOAnimasjon/static/js/main.53ce627b.js.map",
+    "453.6a57f684.chunk.js.map": "/KXOAnimasjon/static/js/453.6a57f684.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.964fdded.css",
-    "static/js/main.d92d5af5.js"
+    "static/js/main.53ce627b.js"
   ]
 }
